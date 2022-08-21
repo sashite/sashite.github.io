@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/brand/light/logo.png" type="image/x-icon">
+    <link rel="icon" href="img/brand/light/logo.png" type="image/x-icon">
+    <title>Sashité</title>
+
+    <style>
+      @media (prefers-color-scheme: light) {
+        :root {
+          --background-color: white;
+          --color: #333;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #0d1117;
+          --color: #aaa;
+        }
+      }
+
+      @media (orientation: landscape) {
+        :root {
+          --size: 100vh;
+        }
+      }
+
+      @media (orientation: portrait) {
+        :root {
+          --size: 100vw;
+        }
+      }
+
+      :root {
+        --margin-size: calc(var(--size)/60);
+        --picture-size: calc(var(--size)/2);
+        --text-size: calc(var(--size)/20);
+
+        font-family: system-ui;
+        background-color: var(--background-color);
+        color: var(--color);
+      }
+
+      html,
+      body,
+      header,
+      figure,
+      p {
+        margin: var(--margin-size);
+        padding: 0;
+      }
+
+      img {
+        width: var(--picture-size);
+      }
+
+      p,
+      figcaption {
+        font-size: var(--text-size);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <picture>
+        <source srcset="img/brand/dark/ja/sashite.png" media="(prefers-color-scheme: dark)" alt="指し手" title="Sashité">
+        <img src="img/brand/light/ja/sashite.png" alt="指し手" title="Sashité">
+      </picture>
+    </header>
+
+    <figure>
+      <img src="img/train.jpg" alt="An arriving train">
+      <figcaption>間もなく、間もなく・・・</figcaption>
+    </figure>
+
+    <p lang="en">
+      Sashité will arrive soon.
+    </p>
+  </body>
+</html>
